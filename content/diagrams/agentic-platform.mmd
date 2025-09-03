@@ -1,0 +1,9 @@
+flowchart TB
+U[(User)] --> Plan[Planner]
+Plan --> Route{Router}
+Route -->|Tool| Tools[Tools/Adapters]
+Route -->|Recall| RAG[(pgvector Memory)]
+RAG --> Ctxt[Context Pack]
+Ctxt --> Exec[Executor]
+Exec --> Eval[Evaluators]
+Eval -->|feedback| Plan

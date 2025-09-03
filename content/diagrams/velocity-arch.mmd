@@ -1,0 +1,9 @@
+flowchart LR
+A[PDP URL] --> P[Planner]
+P -->|scenes| T[Timeline Synth]
+T --> G[Guardrails]
+G --> O[Orchestrator]
+O --> R[Render Queue]
+R --> V[Video Assets]
+
+

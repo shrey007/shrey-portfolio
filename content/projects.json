@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "velocity",
+    "title": "Velocity — PDP → Video in <7 min",
+    "role": "Tech Lead / Architect",
+    "problem": "Brands needed on-brand product videos at scale without long creative cycles.",
+    "approach": [
+      "Timeline synthesis from PDP + template graph",
+      "Rule-based guardrails around LLM outputs",
+      "Vendor-agnostic LLM orchestration and render queue"
+    ],
+    "impact": [
+      "$3M+ enterprise deal contribution",
+      "Adopted by D2C and Fortune 500 teams"
+    ],
+    "links": [{ "label": "velocity.avataar.ai", "href": "https://velocity.avataar.ai" }],
+    "diagram": "velocity-arch.mmd",
+    "tags": ["GenAI", "LLM Orchestration", "Video", "Guardrails", "Render Pipeline"]
+  },
+  {
+    "slug": "agentic-platform",
+    "title": "Agentic AI Platform — Planner · Router · Memory · Executor · Evaluator",
+    "role": "Tech Lead / Architect",
+    "problem": "Teams needed reliable multi-agent orchestration with controllable memory and routing for enterprise use-cases (healthcare/insurance pilots).",
+    "approach": [
+      "Planner → Router with tool adapters",
+      "Two-tier memory with pgvector recall",
+      "Evaluator feedback loops to improve routes"
+    ],
+    "impact": [
+      "Shipped pilots in regulated domains",
+      "Reduced failure modes via guardrails + evaluators"
+    ],
+    "links": [],
+    "diagram": "agentic-platform.mmd",
+    "tags": ["Agentic AI", "RAG", "pgvector", "Orchestration", "Evaluators"]
+  },
+  {
+    "slug": "creator",
+    "title": "Creator — 7 days → <1 hour creative cycles",
+    "role": "Engineer / Tech Lead",
+    "problem": "Enterprise creative teams needed rapid iteration on product visuals without long asset pipelines.",
+    "approach": [
+      "Composable templates + scene params",
+      "Asset reuse and automated QA steps",
+      "CI-like media pipeline with approvals"
+    ],
+    "impact": [
+      "Used by Lowe’s & HP",
+      "Cycle time reduced from 7 days to under 1 hour"
+    ],
+    "links": [{ "label": "creator.avataar.ai", "href": "https://creator.avataar.ai" }],
+    "diagram": "",
+    "tags": ["Media Pipeline", "Automation", "Enterprise"]
+  },
+  {
+    "slug": "incarnate",
+    "title": "Incarnate — Capture → 3D → AR in minutes",
+    "role": "Engineer / Research",
+    "problem": "Generating 3D/AR assets from captures took days and required manual effort.",
+    "approach": [
+      "Background uploads and async processing",
+      "Optimized 3D reconstruction pipeline",
+      "AR-ready outputs with guardrails"
+    ],
+    "impact": [
+      "Cut asset generation from days to minutes",
+      "Enabled scalable 3D/AR catalogs"
+    ],
+    "links": [],
+    "diagram": "",
+    "tags": ["3D", "AR", "R3F", "Computer Vision", "Pipelines"]
+  }
+]
