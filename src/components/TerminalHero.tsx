@@ -57,43 +57,43 @@ export default function TerminalHero() {
       {/* Neural network background */}
       <div className="absolute inset-0 bg-neural-net opacity-30"></div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-cyber-darker/80 border border-neon-cyan/30 rounded-lg p-8 font-mono backdrop-blur-sm shadow-neon-cyan"
+          className="bg-cyber-darker/80 border border-neon-cyan/30 rounded-lg p-4 sm:p-6 md:p-8 font-mono backdrop-blur-sm shadow-neon-cyan"
         >
           {/* Terminal header */}
-          <div className="flex items-center justify-between mb-6 pb-3 border-b border-neon-cyan/20">
+          <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3 border-b border-neon-cyan/20">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-neon-pink rounded-full animate-glow-pulse"></div>
               <div className="w-3 h-3 bg-neon-orange rounded-full animate-glow-pulse" style={{ animationDelay: '0.2s' }}></div>
               <div className="w-3 h-3 bg-neon-green rounded-full animate-glow-pulse" style={{ animationDelay: '0.4s' }}></div>
             </div>
-            <span className="text-neon-cyan/70 text-sm">neural_interface_v2.0</span>
+            <span className="text-neon-cyan/70 text-xs sm:text-sm">neural_interface_v2.0</span>
           </div>
 
           {/* Terminal content */}
-          <div className="space-y-3 text-terminal-green">
+          <div className="space-y-2 sm:space-y-3 text-terminal-green text-sm sm:text-base">
             {commands.slice(0, currentLine).map((command, index) => (
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.3 }}
-                className="flex items-center"
+                className="flex items-start sm:items-center"
               >
-                <span className="text-neon-pink mr-2">❯</span>
-                <span>{command}</span>
+                <span className="text-neon-pink mr-2 flex-shrink-0">❯</span>
+                <span className="break-words">{command}</span>
               </motion.div>
             ))}
             
             {currentLine < commands.length && (
-              <div className="flex items-center">
-                <span className="text-neon-pink mr-2">❯</span>
-                <span>{displayedText}</span>
-                <span className={`ml-1 w-2 h-5 bg-terminal-green ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}></span>
+              <div className="flex items-start sm:items-center">
+                <span className="text-neon-pink mr-2 flex-shrink-0">❯</span>
+                <span className="break-words">{displayedText}</span>
+                <span className={`ml-1 w-2 h-4 sm:h-5 bg-terminal-green ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}></span>
               </div>
             )}
 
@@ -102,22 +102,22 @@ export default function TerminalHero() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
-                className="mt-8 pt-6 border-t border-neon-cyan/20"
+                className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-neon-cyan/20"
               >
-                <h1 className="text-4xl md:text-6xl font-cyber font-bold text-neon-cyan mb-4 animate-glow-pulse">
+                <h1 className="text-2xl sm:text-4xl md:text-6xl font-cyber font-bold text-neon-cyan mb-3 sm:mb-4 animate-glow-pulse leading-tight">
                   SHREY CHOPRA
                 </h1>
-                <p className="text-xl md:text-2xl text-neon-green mb-6">
+                <p className="text-lg sm:text-xl md:text-2xl text-neon-green mb-4 sm:mb-6">
                   AI SYSTEMS ARCHITECT
                 </p>
-                <div className="flex flex-wrap gap-4 text-sm">
-                  <span className="px-3 py-1 border border-neon-pink/50 text-neon-pink rounded-full animate-glow-pulse">
+                <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
+                  <span className="px-2 sm:px-3 py-1 border border-neon-pink/50 text-neon-pink rounded-full animate-glow-pulse">
                     AGENTIC AI
                   </span>
-                  <span className="px-3 py-1 border border-neon-purple/50 text-neon-purple rounded-full animate-glow-pulse" style={{ animationDelay: '0.2s' }}>
+                  <span className="px-2 sm:px-3 py-1 border border-neon-purple/50 text-neon-purple rounded-full animate-glow-pulse" style={{ animationDelay: '0.2s' }}>
                     GENERATIVE AI
                   </span>
-                  <span className="px-3 py-1 border border-neon-orange/50 text-neon-orange rounded-full animate-glow-pulse" style={{ animationDelay: '0.4s' }}>
+                  <span className="px-2 sm:px-3 py-1 border border-neon-orange/50 text-neon-orange rounded-full animate-glow-pulse" style={{ animationDelay: '0.4s' }}>
                     3D/AR SYSTEMS
                   </span>
                 </div>
@@ -132,13 +132,13 @@ export default function TerminalHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5 }}
-            className="text-center mt-8"
+            className="text-center mt-6 sm:mt-8"
           >
-            <div className="text-neon-cyan/60 text-sm mb-4">
+            <div className="text-neon-cyan/60 text-xs sm:text-sm mb-4">
               Press <kbd className="px-2 py-1 bg-cyber-darker border border-neon-cyan/30 rounded text-xs">⌘K</kbd> to access neural interface
             </div>
             <div className="animate-bounce">
-              <svg className="w-6 h-6 mx-auto text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>

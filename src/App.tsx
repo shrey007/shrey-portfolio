@@ -85,53 +85,57 @@ function App() {
               </div>
 
               {/* Center: High contrast navigation */}
-              <div className="hidden md:flex items-center space-x-2">
+              <div className="flex items-center space-x-1 sm:space-x-2">
                 <button
-                  className={`px-5 py-3 rounded-xl font-mono text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
+                  className={`px-2 sm:px-3 md:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl font-mono text-xs sm:text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
                     currentSection === 0
                       ? 'text-neon-cyan bg-cyber-dark/80 border-neon-cyan scale-105 shadow-[0_0_15px_rgba(0,255,255,0.4)]'
                       : 'text-neon-cyan/70 hover:text-neon-cyan bg-black/40 hover:bg-cyber-dark/60 border-neon-cyan/30 hover:border-neon-cyan hover:shadow-[0_0_10px_rgba(0,255,255,0.3)]'
                   }`}
                   onClick={() => document.querySelector(`section[data-section="0"]`)?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <span className="mr-2 text-lg">◉</span>
-                  <span className="tracking-wider">SYSTEMS</span>
+                  <span className="mr-1 sm:mr-2 text-sm sm:text-lg">◉</span>
+                  <span className="tracking-wider hidden sm:inline">SYSTEMS</span>
+                  <span className="tracking-wider sm:hidden">SYS</span>
                 </button>
                 
                 <button
-                  className={`px-5 py-3 rounded-xl font-mono text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
+                  className={`px-2 sm:px-3 md:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl font-mono text-xs sm:text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
                     currentSection === 1
                       ? 'text-neon-pink bg-cyber-dark/80 border-neon-pink scale-105 shadow-[0_0_15px_rgba(255,0,128,0.4)]'
                       : 'text-neon-pink/70 hover:text-neon-pink bg-black/40 hover:bg-cyber-dark/60 border-neon-pink/30 hover:border-neon-pink hover:shadow-[0_0_10px_rgba(255,0,128,0.3)]'
                   }`}
                   onClick={() => document.querySelector(`section[data-section="1"]`)?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <span className="mr-2 text-lg">◈</span>
-                  <span className="tracking-wider">PROJECTS</span>
+                  <span className="mr-1 sm:mr-2 text-sm sm:text-lg">◈</span>
+                  <span className="tracking-wider hidden sm:inline">PROJECTS</span>
+                  <span className="tracking-wider sm:hidden">PROJ</span>
                 </button>
                 
                 <button
-                  className={`px-5 py-3 rounded-xl font-mono text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
+                  className={`px-2 sm:px-3 md:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl font-mono text-xs sm:text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
                     currentSection === 2
                       ? 'text-neon-green bg-cyber-dark/80 border-neon-green scale-105 shadow-[0_0_15px_rgba(0,255,65,0.4)]'
                       : 'text-neon-green/70 hover:text-neon-green bg-black/40 hover:bg-cyber-dark/60 border-neon-green/30 hover:border-neon-green hover:shadow-[0_0_10px_rgba(0,255,65,0.3)]'
                   }`}
                   onClick={() => document.querySelector(`section[data-section="2"]`)?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <span className="mr-2 text-lg">◊</span>
-                  <span className="tracking-wider">NEURAL_NET</span>
+                  <span className="mr-1 sm:mr-2 text-sm sm:text-lg">◊</span>
+                  <span className="tracking-wider hidden sm:inline">NEURAL_NET</span>
+                  <span className="tracking-wider sm:hidden">NET</span>
                 </button>
                 
                 <button
-                  className={`px-5 py-3 rounded-xl font-mono text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
+                  className={`px-2 sm:px-3 md:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl font-mono text-xs sm:text-sm font-bold transition-all duration-300 border-2 backdrop-blur-sm ${
                     currentSection === 3
                       ? 'text-neon-purple bg-cyber-dark/80 border-neon-purple scale-105 shadow-[0_0_15px_rgba(139,0,255,0.4)]'
                       : 'text-neon-purple/70 hover:text-neon-purple bg-black/40 hover:bg-cyber-dark/60 border-neon-purple/30 hover:border-neon-purple hover:shadow-[0_0_10px_rgba(139,0,255,0.3)]'
                   }`}
                   onClick={() => document.querySelector(`section[data-section="3"]`)?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <span className="mr-2 text-lg">◎</span>
-                  <span className="tracking-wider">CONTACT</span>
+                  <span className="mr-1 sm:mr-2 text-sm sm:text-lg">◎</span>
+                  <span className="tracking-wider hidden sm:inline">CONTACT</span>
+                  <span className="tracking-wider sm:hidden">CONT</span>
                 </button>
               </div>
 
